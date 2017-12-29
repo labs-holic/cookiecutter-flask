@@ -24,7 +24,7 @@ You will be asked about your basic info (name, project name, app name, etc.). Th
 Features
 --------
 
-- Flask-SQLAlchemy with basic User model
+- Flask-SQLAlchemy
 - Easy database migrations with Flask-Migrate
 - Flask-WTForms with login and registration forms
 - Flask-Login for authentication
