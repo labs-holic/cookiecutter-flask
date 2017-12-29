@@ -5,24 +5,25 @@ A Flask template for cookiecutter_.
 
 .. _cookiecutter: https://github.com/audreyr/cookiecutter
 
-.. image:: https://travis-ci.org/sloria/cookiecutter-flask.svg
-    :target: https://travis-ci.org/sloria/cookiecutter-flask
-    :alt: Build Status
+Clone of:
 
+.. _cookiecutter flask: https://github.com/sloria/cookiecutter-flask
 
 Use it now
 ----------
 ::
 
     $ pip install cookiecutter
-    $ cookiecutter https://github.com/sloria/cookiecutter-flask.git
+    $ cookiecutter https://github.com/labs-holic/cookiecutter-flask.git
+    $ cd { PROJECT_FOLDER }
+    $ npm install
+    $ npm start
 
 You will be asked about your basic info (name, project name, app name, etc.). This info will be used in your new project.
 
 Features
 --------
 
-- Bootstrap 3 and Font Awesome 4 with starter templates
 - Flask-SQLAlchemy with basic User model
 - Easy database migrations with Flask-Migrate
 - Flask-WTForms with login and registration forms
@@ -36,19 +37,6 @@ Features
 - Caching using Flask-Cache
 - Useful debug toolbar
 - Utilizes best practices: `Blueprints <http://flask.pocoo.org/docs/blueprints/>`_ and `Application Factory <http://flask.pocoo.org/docs/patterns/appfactories/>`_ patterns
-
-Screenshots
------------
-
-.. image:: https://dl.dropboxusercontent.com/u/1693233/github/cookiecutter-flask-01.png
-    :target: https://dl.dropboxusercontent.com/u/1693233/github/cookiecutter-flask-01.png
-    :alt: Home page
-
-.. image:: https://dl.dropboxusercontent.com/u/1693233/github/cookiecutter-flask-02.png.png
-    :target: https://dl.dropboxusercontent.com/u/1693233/github/cookiecutter-flask-02.png.png
-    :alt: Registration form
-
-
 
 Inspiration
 -----------
