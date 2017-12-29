@@ -22,7 +22,6 @@ module.exports = {
     main_js: './assets/js/main',
     main_css: [
       path.join(__dirname, 'node_modules', 'font-awesome', 'css', 'font-awesome.css'),
-      path.join(__dirname, 'node_modules', 'bootstrap', 'dist', 'css', 'bootstrap.css'),
       path.join(__dirname, 'assets', 'css', 'style.css'),
     ],
   },
@@ -52,7 +51,6 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin('[name].[hash].css'),
-    new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery' }),
     new ManifestRevisionPlugin(path.join(__dirname, '{{cookiecutter.app_name}}', 'webpack', 'manifest.json'), {
       rootAssetPath,
       ignorePaths: ['/js', '/css'],
