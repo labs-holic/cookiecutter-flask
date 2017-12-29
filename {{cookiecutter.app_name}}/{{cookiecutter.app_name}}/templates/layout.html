@@ -8,10 +8,11 @@
 <head>
   <meta charset="utf-8">
 
-  <title>{% block page_title %}
-  {% endraw %}
-    {{ cookiecutter.project_name }}
-  {% raw %}
+  <title>
+    {% block page_title %}
+      {% endraw %}
+        {{ cookiecutter.project_name }}
+      {% raw %}
     {% endblock %}
   </title>
   <meta name="description" content="{% block meta_description %}{% endblock %}">
@@ -19,43 +20,12 @@
 
   <!-- Mobile viewport optimized: h5bp.com/viewport -->
   <meta name="viewport" content="width=device-width">
-
   {{ stylesheet_tag('main_css') | safe }}
 
   {% block css %}{% endblock %}
-
 </head>
-<body class="{% block body_class %}{% endblock %}">
+<body>
 {% block body %}
-{% with form=form  %}
-{% include "nav.html" %}
-{% endwith %}
-
-<header>{% block header %}{% endblock %}</header>
-<div class="{% block content_class %}container{% endblock content_class %}">
-
-  <div role="main">
-    {% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages %}
-    <div class="row">
-      <div class="col-md-12">
-        {% for category, message in messages %}
-        <div class="alert alert-{{ category }}">
-          <a class="close" title="Close" href="#" data-dismiss="alert">&times;</a>
-         {{message}}
-        </div><!-- end .alert -->
-        {% endfor %}
-      </div><!-- end col-md -->
-    </div><!-- end row -->
-        {% endif %}
-    {% endwith %}
-
-    {% block content %}{% endblock %}
-  </div>
-
-</div><!-- end container -->
-
-{% include "footer.html" %}
 
 <!-- JavaScript at the bottom for fast page loading -->
 {{ javascript_tag('main_js') | safe }}

@@ -2,8 +2,11 @@
 """The app module, containing the app factory function."""
 from flask import Flask, render_template
 
-from {{cookiecutter.app_name}} import commands, public, user
-from {{cookiecutter.app_name}}.extensions import bcrypt, cache, csrf_protect, db, debug_toolbar, login_manager, migrate, webpack
+from {{cookiecutter.app_name}} import commands, public
+from {{cookiecutter.app_name}}.extensions import bcrypt, cache, csrf_protect
+from {{cookiecutter.app_name}}.extensions import db, debug_toolbar
+from {{cookiecutter.app_name}}.extensions import login_manager, migrate
+from {{cookiecutter.app_name}}.extensions import webpack
 from {{cookiecutter.app_name}}.settings import ProdConfig
 
 
@@ -38,7 +41,6 @@ def register_extensions(app):
 def register_blueprints(app):
     """Register Flask blueprints."""
     app.register_blueprint(public.views.blueprint)
-    app.register_blueprint(user.views.blueprint)
     return None
 
 
@@ -59,8 +61,8 @@ def register_shellcontext(app):
     def shell_context():
         """Shell context objects."""
         return {
-            'db': db,
-            'User': user.models.User}
+            'db': db
+        }
 
     app.shell_context_processor(shell_context)
 
