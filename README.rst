@@ -5,7 +5,7 @@ A Flask template for cookiecutter_.
 
 .. _cookiecutter: https://github.com/audreyr/cookiecutter
 
-Clone of `cookiecutter flask`_:
+Clone of `cookiecutter flask`_.
 
 .. _cookiecutter flask: https://github.com/sloria/cookiecutter-flask
 
